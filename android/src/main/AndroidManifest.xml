@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ch.install.flutter_install_apk">
+
+    <application>
+        <provider
+            android:name=".MyFileProvider"
+            android:authorities="${applicationId}.fileProvider.install"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_file_path" />
+        </provider>
+    </application>
+</manifest>
