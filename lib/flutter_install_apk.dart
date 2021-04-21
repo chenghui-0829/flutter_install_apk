@@ -7,9 +7,9 @@ class FlutterInstallApk {
       const MethodChannel('io.flutter.plugins/flutter_install_apk');
 
   static Future downLoadApk(
-      {String apkUrl,
+      {required String apkUrl,
       appId,
-      Function(String progress) progressListener}) async {
+      required Function(String progress) progressListener}) async {
     _channel.setMethodCallHandler((call) async {
       if (call.method == 'progressListener') {
         progressListener(call.arguments);
